@@ -31,6 +31,14 @@
 
 実装とブラウザでの確認は完了。未確認項目があるため、要件書に定義された「全受入基準の合格」とは区別します。
 
+## GitHubでの確認・公開状況
+
+実装を `main` に反映し、ローカルとリポジトリのソースツリーの一致を確認しました。[GitHub ActionsのCI](https://github.com/eternitybios-dot/golf/actions/runs/36965687300)でも、ビルド・6件の単体検証・6件のブラウザ検証が成功しています。
+
+Pagesの有効化APIは `403 Resource not accessible by integration` で拒否されました。[公開ワークフロー](https://github.com/eternitybios-dot/golf/actions/runs/36965687298)はビルドと単体検証に成功し、Pages未設定のため `actions/configure-pages` で停止しています。公開URLは現時点で404です。
+
+リポジトリのSettings → PagesでSourceをGitHub Actionsに設定し、公開ワークフローをRun workflowで再実行すると、公開を進められます。
+
 ## iPhoneでの確認手順
 
 1. 現行と1つ前の主要iOS版で、Safariから公開URLを開く。端末名・OS版を記録。

@@ -29,10 +29,11 @@ npm run test:e2e
 
 ## GitHub Pagesへの公開
 
-1. この実装ブランチを `main` に取り込みます。
-2. リポジトリの **Settings → Pages → Build and deployment → Source** を **GitHub Actions** に設定します。
-3. **Actions → Deploy golf to GitHub Pages** を実行します。以後は `main` 更新時に自動でビルド・公開します。
-4. デプロイ成功後、`https://eternitybios-dot.github.io/golf/` をiPhoneのSafariで開きます。
+実装は `main` に反映済みです。2026-10-02時点では、GitHub接続にPagesの有効化権限がないため、公開設定の変更だけが残っています。
+
+1. リポジトリの **Settings → Pages → Build and deployment → Source** を **GitHub Actions** に設定します。
+2. **Actions → Deploy golf to GitHub Pages → Run workflow** を実行します。以後は `main` 更新時に自動でビルド・公開します。
+3. デプロイ成功後、`https://eternitybios-dot.github.io/golf/` をiPhoneのSafariで開きます。
 
 上記URLは公開設定とデプロイが成功した場合のURLです。公開状況はActionsで確認してください。配信パスは `/golf/`、画面はハッシュ方式なので詳細画面の再読み込みにも対応します。
 
